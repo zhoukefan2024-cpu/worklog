@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工作日志</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow"><span class="dot"></span> GUANTANG / WORKLOG <span class="status">STATUS: ACTIVE</span></div>
+      <h1>工作日志</h1>
+      <p>按日期归档　·　勾选即视为完成　·　多设备同步</p>
+      <div class="progress-line"><span>progress</span><strong id="progressText">0 / 0</strong></div>
+      <div class="track"><i id="progressBar"></i></div>
+    </header>
+    <nav class="filters"><button class="filter active" data-filter="all">[ 全部 ]</button><button class="filter" data-filter="open">[ 未完成 ]</button><button class="filter" data-filter="done">[ 已完成 ]</button><button id="resetView" class="reset">重置筛选</button></nav>
+    <section id="days" aria-live="polite"></section>
+    <form id="addForm" class="add-box">
+      <div class="add-title">› 新增事项</div>
+      <div class="add-row"><input id="taskDate" type="date" required><input id="taskText" type="text" placeholder="例：完成方案审核" maxlength="180" required><button type="submit">加入待办</button></div>
+      <small id="syncStatus">连接同步服务中…</small>
+    </form>
+    <footer>工作日志　·　勾选状态自动保存</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
